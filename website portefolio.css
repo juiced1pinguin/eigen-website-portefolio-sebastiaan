@@ -1,0 +1,143 @@
+body {
+    background-color: rgb(17, 15, 73);
+    color: white;
+}
+
+.plaatje {
+    grid-area: profielfoto;
+    ;
+}
+
+.naam {
+    grid-area: naam;
+    font-size: 2.6em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: -6px 6px 2px rgba(0, 0, 0, 1);
+}
+
+.links {
+    grid-area: links;
+}
+
+.overmij {
+    grid-area: overmij;
+}
+
+.grid-container-portefolio {
+    .naam {
+        position: absolute;
+        margin-left: 40mm;
+        margin-top: 18mm;
+    }
+
+    .overmij {
+        position: absolute;
+        margin-top: 29mm;
+        margin-left: 40mm;
+    }
+
+    width: 100%;
+    margin: 7px;
+    display: grid;
+    grid-template-areas: 'profielfoto links links'
+    'profielfoto naam naam'
+    'overmij overmij overmij'
+    ;
+
+    @media(min-width: 940px) {
+        grid-template-areas:
+            'profielfoto profielfoto profielfoto links'
+            'naam naam naam naam'
+            'overmij overmij overmij overmij'
+        ;
+
+        .naam {
+            position: absolute;
+            margin-left: 40mm;
+            margin-top: 2mm;
+        }
+
+        .overmij {
+            position: absolute;
+            margin-top: 5em;
+            margin-left: 40mm;
+        }
+
+        .naam {
+            font-size: 3.8em;
+        }
+    }
+}
+
+.grid-container-portefolio div img {
+    width: 8em;
+    border-radius: 33%;
+    padding: 4px;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 6em;
+    padding: 10px;
+    background-color: rgba(0, 97, 145, 0.447);
+}
+
+.footer-text p {
+    font-size: 1.8vw;
+}
+
+.plaatjes-website {
+    width: 33%;
+}
+
+
+
+.button {
+    margin: 1mm;
+    padding: 3mm 5mm;
+    font-size: 7mm;
+    text-align: center;
+    cursor: pointer;
+    color: #ffffffab;
+    background-color: #01259a88;
+    border: 1mm solid rgba(0, 0, 0, 0.466);
+    border-radius: 15px;
+    box-shadow: 0 9px #9999994c;
+}
+
+.button:hover {
+    background-color: #37c6ff81
+}
+
+.button:active {
+    background-color: #93d4ff;
+    box-shadow: 0 5px #666;
+    transform: translateY(1mm);
+}
+
+div.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+div.gallery-item {
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 180px;
+}
+
+div.gallery-item:hover {
+    border: 1px solid #777;
+}
+
+div.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+div.gallery-item div.desc {
+    padding: 15px;
+    text-align: center;
+}
